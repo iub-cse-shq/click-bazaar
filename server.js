@@ -24,7 +24,7 @@ var app = require('./express.js')(db);
 require('./passport')();
 
 app.listen(app.get('port'), function(){
-	console.log('Server running');
+	console.log('ANup Server running');
 })
 
 module.exports = app;
