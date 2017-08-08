@@ -3,63 +3,6 @@ var Product = require('./../models/Product.js');
 var errorHandler = require('./errors.server.controller');
 var _ = require('lodash');
 
-<<<<<<< HEAD
-
-
-module.exports.listview = function(req, res) {
-  Product.find(function(err, data) {
-    if (err) {
-      return res.status(400).send({
-
-  				message: errorHandler.getErrorMessage(err)
-  			});
-    } else {
-      console.log("api called");
-  
-
-      res.status(200).send(data);
-    }
-  });
-  
-};
-
-module.exports.new = function(req, res) {
-  
-  res.render('./../public/views/product/create.ejs',{
-    user: req.user ||null,
-    request: req
-    
-  });
-};
-  
-module.exports.view = function(req, res) {
-  
-  res.render('./../public/views/product/view.ejs',{
-    user: req.user ||null,
-    request: req
-    
-  });
-};  
-
-
-
-=======
-module.exports.new = function(req, res) {
-  
-  res.render('./../public/views/product/create.ejs',{
-    user: req.user  || null,
-    request: req
-  });
-};
-module.exports.edit = function(req, res) {
-  
-  res.render('./../public/views/product/edit.ejs',{
-    user: req.user  || null,
-    request: req
-  });
-};
-  
->>>>>>> 2181363138b5ca9e97751927247fae15c1108458
 module.exports.list = function(req, res) {
   Product.find(function(err, data) {
     if (err) {
@@ -74,22 +17,16 @@ module.exports.list = function(req, res) {
     }
   });
 };
-<<<<<<< HEAD
 
-module.exports.create = function(req, res) {
-  var product = new product(req.body);
-=======
-module.exports.view = function(req, res) {
-  
-  res.render('./../public/views/product/view.ejs',{
-    user: req.user  || null,
-    request: req
-  });
+exports.new = function(req, res) {
+	res.render('./../public/views/admin/add_product.ejs', {
+		user: req.user || null,
+		request: req
+	});
 };
 
 module.exports.create = function(req, res) {
   var product = new Product(req.body);
->>>>>>> 2181363138b5ca9e97751927247fae15c1108458
   product.user = req.user;
   product.save(function(err, data) {
     if (err) {
@@ -141,8 +78,4 @@ exports.productByID = function(req, res, next, id) {
 		req.product = product;
 		next();
 	});
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> 2181363138b5ca9e97751927247fae15c1108458

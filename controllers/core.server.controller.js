@@ -18,8 +18,8 @@ exports.signup = function(req, res) {
 	});
 };
 
-exports.product = function(req, res) {
-	res.render('./../public/views/product/create.ejs', {
+exports.add_product = function(req, res) {
+	res.render('./../public/views/product/add_product.ejs', {
 		user: req.user || null,
 		request: req
 	});
