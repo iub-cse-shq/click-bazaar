@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var Article = require('./models/Article.js');
 var User = require('./models/User.js');
 mongoose.connection.dropDatabase(error => {
-  console.log('Database not dropped');
+  console.log('Database...not dropped');
   //process.exit(0);
 });
 
@@ -16,6 +16,7 @@ var user = {
     username: 'TD-BD',
     provider: 'local'
 };
+
 user = new User(user);
 user.save();
 
@@ -25,6 +26,13 @@ var initial = [{
     user:user
   },
 
+  {
+    title: "article 4",
+    content: "content for article 4 ",
+    user:user
+
+  },
+  
   {
     title: "article 2",
     content: "content for article 2 ",

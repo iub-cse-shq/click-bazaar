@@ -10,6 +10,30 @@ exports.index = function(req, res) {
 	});
 };
 
+
+exports.signup = function(req, res) {
+	res.render('./../public/views/user/signup.ejs', {
+		user: req.user || null,
+		request: req
+	});
+};
+
+exports.product = function(req, res) {
+	res.render('./../public/views/product/create.ejs', {
+		user: req.user || null,
+		request: req
+	});
+};
+
+
+exports.list = function(req, res) {
+	res.render('./../public/views/article/list.ejs', {
+		user: req.user || null,
+		request: req
+	});
+};
+
+
 exports.about = function(req, res) {
 	res.render('./../about.ejs', {
 		user: req.user || null,
