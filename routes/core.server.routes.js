@@ -8,5 +8,8 @@ module.exports = function(app) {
 	app.route('/add_product').get(core.add_product);
 	app.route('/view_list').get(core.view_list);
 	app.route('/signup').get(core.signup);
+
+	
+
 	
 };

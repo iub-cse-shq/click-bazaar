@@ -25,12 +25,14 @@ exports.add_product = function(req, res) {
 	});
 };
 
+
 exports.view_list = function(req, res) {
 	res.render('./../public/views/product/view_list.ejs', {
 		user: req.user || null,
 		request: req
 	});
 };
+
 
 
 exports.list = function(req, res) {
