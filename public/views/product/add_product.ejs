@@ -1,0 +1,280 @@
+<!DOCTYPE html5>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Add New Product!</title>
+    <!-- General META -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <!DOCTYPE html>
+<html>
+<head>
+<title>ClickBazar Home  </title>
+<link rel="icon" href="/images/favicon.gif" type="image/gif" sizes="16x16">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="/css/stylee.css">
+<link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+<script src="/js/sidebar.js"></script>
+
+
+<h1 align="center">Click Bazar</h1>
+
+
+
+</head>
+<body>
+
+
+<div class="menuBar">
+  <body>
+
+
+
+<style>
+
+table {
+    align-content: center;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 75%;
+    background-color: silver;
+}
+
+td, th {
+    border: 2px solid #dddddd;
+    text-align: center;
+
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+    border-right:1px solid #bbb;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: green;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: #7bc1ec;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: silver; }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: green;
+}
+
+    
+                
+        
+</style>
+
+
+
+
+
+    <ul>
+     <li><a class="active" href="https://click-bazaar-shamahoque.c9users.io">Home</a></li>
+     <li><a href="#">Shopping</a></li>
+     <li class="dropdown"><a href="#" class="dropbtn">Demo </a>
+       <div class="dropdown-content">
+         <a href="#">Demo 1</a>
+         <a href="#">Demo 2</a>
+         <a href="#">Demo 3</a>
+         <a href="#">Demo 4</a>
+        <a href="#">Demo 5</a>
+       </div>  
+
+       <li style="float:right"><a href="#">Contact Us</a></li>
+       <li><a href="#">Privacy & policy</a></li>
+       <li style="float:right"><a href="#about">About us</a></li>
+       <li><a href="add_product">Add items</a></li>
+       <li style="float:right"><a href="/auth/signout">Sign Up</a></li>
+    </ul>
+  </body>
+</div>
+
+
+  <br>
+  <center></center><span></span><p align="center">Add items to inventory  </p></span></center>
+
+
+  <br>
+
+<
+
+
+
+
+  <br>  <br>  <br>
+
+ <style>
+    input:valid{
+     border:1px solid green;
+    }
+    input:invalid{
+      border:1px solid red;
+    }
+    
+    </style>
+    
+  </head>
+  <body>
+     <center> <h1>Add New Product</h1></center>
+      
+  
+  <form id ="createProductForm" class="form-horizontal"onsubmit="return false;">
+    <div class="form-group">
+      <center><level for="name" class="col-sm-2 control-level"> Name</level></center>
+      <div class="col-sm-8">
+        <input type ="text" class="form-control" id="name" placeholder="Food "required>
+      </div>
+    </div> 
+   <div class="form-group">
+      <center><level for="description" class="col-sm-2 control-level"> Description</level></center>
+      <div class="col-sm-8">
+        <textarea class="form-control" rows="3" id="description"></textarea>
+      </div>
+    </div> 
+   
+    <div class="form-group">
+      <center><level for="price" class="col-sm-2 control-level"> price</level></center>
+      <div class="col-sm-8">
+        <input type ="number" class="form-control" id="price">
+      </div>
+    </div> 
+   <div class="form-group">
+      <center><level for="quantity" class="col-sm-2 control-level"> quantity</level></center>
+      <div class="col-sm-8">
+        <input type ="number" class="form-control" id="quantity" min="1" required>
+      </div>
+    </div> 
+   
+     <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button id="submit" type="submit" class="btn btn-default">Submit</button>
+        <div id="error"></div>
+      </div>
+    </div> 
+    </form>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"
+    <script>
+    var product = {
+      name: ""
+      description: "",
+      price: null,
+      quantity: null
+    };
+      $("#submit").click(function(event){
+      if( $("#createProductForm").valid() ){
+        product.name = $('#name').val();
+        product.description = $('#description').val();
+        product.price = $('#price').val();
+        product.quantity = $('#quantity').val();
+        console.log(product);
+      $.ajax({
+        url:"/api/products",
+        method:"post",
+        date: product
+        
+      }).done(function(response){
+        console.log(response);
+        window.location.replace("/products/"+resoibse,_id);
+      }).fail(function(response){
+        console.log(resoibse responseText);
+        $("#error").text(JSON>parse(respose.responseText).message);
+        
+      })  ;
+      
+      
+        
+        
+      }
+      else {
+        console.log("invalid input");
+      }
+      });
+    </script>
+    </body> 
+
+<script src="/js/Script.js"></script>
+
+<div id="footer">
+  <br>
+  <br>
+   <p align="center";> (c) Copyright 2017, All Rights Reserved || Anup || </p>
+  </br>
+  </br>
+</div> 
+
+</body>
+</html> 
+
+  </html>
+  
