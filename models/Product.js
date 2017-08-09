@@ -2,31 +2,53 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var ProductSchema = {
 
-  title: {
+
+      
+    name: {
+        type: String,
+        trim: true,
+        default: '',
+        required: 'product Name required'
+      },
+      
+    description: {
     type: String,
     default: '',
     trim: true,
-    required: 'Title required'
+    required: 'Description required'
   },
 
-  content: {
-    type: String,
+  price: {
+    type: Number,
     default: '',
-    trim: true,
-    required: 'Content required'
-
+    required: 'Price required'
   },
-
-  user: {
+  
+    quantity: {
+        type: Number,
+        trim: true,
+        default: '',
+        required: 'Quantity required'
+    },
+    
+    category: {
+        type: String,
+        trim: true,
+        default: '',
+        required: 'category required'
+    },
+    
+    user: {
     type: Schema.ObjectId,
     ref: 'User'
   },
 
-  created: {
+    created: {
     type: Date,
     default: Date.now
   }
-}
+};
 
-var Product = mongoose.model('Product', ProductSchema, 'products');
+
+var Product = mongoose.model('Product', ProductSchema, 'product');
 module.exports = Product;

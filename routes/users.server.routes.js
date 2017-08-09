@@ -33,6 +33,9 @@ module.exports = function(app) {
 
 	app.route('/signup').get(users.signupView);
 
+
+	app.route('/signup').get(users.signupView);
+
 	
 	// Finish by binding the user middleware
 	app.param('userId', users.userByID);
