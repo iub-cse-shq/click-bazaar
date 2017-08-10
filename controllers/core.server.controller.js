@@ -18,6 +18,22 @@ exports.signup = function(req, res) {
 	});
 };
 
+exports.map = function(req, res) {
+	res.render('./../public/views/map.ejs', {
+		user: req.user || null,
+		request: req
+	});
+};
+
+exports.game = function(req, res) {
+	res.render('./../public/views/game.ejs', {
+		user: req.user || null,
+		request: req
+	});
+};
+
+
+
 exports.add_product = function(req, res) {
 	res.render('./../public/views/product/add_product.ejs', {
 		user: req.user || null,
