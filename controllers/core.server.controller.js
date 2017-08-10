@@ -32,6 +32,13 @@ exports.game = function(req, res) {
 	});
 };
 
+exports.contact = function(req, res) {
+	res.render('./../contact.ejs', {
+		user: req.user || null,
+		request: req
+	});
+};
+
 
 
 exports.add_product = function(req, res) {
